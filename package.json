@@ -1,0 +1,38 @@
+{
+  "name": "kysely-websql",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Kysely dialect for Web SQL",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "author": "Andrew <andrewvmail@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/andrewvmail/kysely-websql.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "kysely",
+    "websql",
+    "cordova",
+    "ionic"
+  ],
+  "bugs": {
+    "url": "https://github.com/andrewvmail/kysely-websql/issues"
+  },
+  "scripts": {
+    "build": "tsc",
+    "check": "prettier --check src/ example/",
+    "format": "prettier --write src/ example/"
+  },
+  "peerDependencies": {
+    "kysely": "*"
+  },
+  "devDependencies": {
+    "@types/websql": "^0.0.27",
+    "prettier": "^2.8.4"
+  }
+}

@@ -1,28 +1,15 @@
-# kysely-websql
-
-[![ci](https://github.com/andrewvmail/kysely-websql/actions/workflows/ci.yaml/badge.svg)](https://github.com/andrewvmail/kysely-websql/actions/workflows/ci.yaml)
-[![npm](https://img.shields.io/npm/v/kysely-websql.svg)](https://www.npmjs.com/package/kysely-websql)
-
-This project was largely adapted from [kysely-d1](https://github.com/aidenwallis/kysely-d1).
-
-## Usage
-
-```typescript
-import { Kysely } from 'kysely';
-import { WebSQLDialect } from 'kysely-websql';
+import { Generated, Kysely } from "kysely";
+import { WebSQLDialect } from "kysely-websql";
 
 interface PetTable {
-  id: Generated<number>
-  name: string
-  owner_id: number
-  species: 'dog' | 'cat'
+  id: Generated<number>;
+  name: string;
+  owner_id: number;
+  species: "dog" | "cat";
 }
 
-export interface Env {
-  DB: WebSQLDatabase;
-}
 interface Database {
-  pet: PetTable
+  pet: PetTable;
 }
 
 const db = new Kysely<Database>({
@@ -58,4 +45,3 @@ async function demo() {
 }
 
 demo();
-```

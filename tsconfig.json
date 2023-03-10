@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "moduleResolution": "Node",
+    "outDir": "dist",
+    "alwaysStrict": true,
+    "target": "esnext",
+    "skipLibCheck": true,
+    "strict": true,
+    "preserveConstEnums": true,
+    "declaration": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "test"]
+}
