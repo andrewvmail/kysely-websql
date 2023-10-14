@@ -90,7 +90,7 @@ class WebSQLConnection implements DatabaseConnection {
   }
 
   async executeQuery<O>(compiledQuery: CompiledQuery): Promise<QueryResult<O>> {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
       this.#database.transaction((tx) => {
         tx.executeSql(
           compiledQuery.sql,
@@ -108,8 +108,8 @@ class WebSQLConnection implements DatabaseConnection {
             });
           },
           function onError(tx, error) {
-            throw new Error(`${error.code} ${error.message}`);
-          }
+            reject(`${error.code} ${error.message}`);
+          },
         );
       });
     });
