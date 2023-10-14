@@ -109,6 +109,7 @@ class WebSQLConnection implements DatabaseConnection {
           },
           function onError(tx, error) {
             reject(`${error.code} ${error.message}`);
+            return false;
           },
         );
       });
